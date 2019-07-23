@@ -1,6 +1,7 @@
 # MyFirstGitHubProject
 My fitst GitHub project(Java)                            -Perry L Zhou
 从零搭建一个B/S项目（MindPalace）
+
 语言：
   前台：html，JavaScript，css
   后台：Java
