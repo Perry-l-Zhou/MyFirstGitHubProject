@@ -4,6 +4,23 @@
 
 ### ArrayList：Object数组
 支持高效随机访问，适用于频繁查找操作，线程不安全，结尾预留容量空间占用内存
+#### 源码解读（JDK1.8）
+1、构造
++ 无参，构造构建空数组
++ Capacity为参，构建对应长度Object数组
++ Collection为参，转数组赋值，之后判断class类型决定是否重新copy为object[]类型。
+
+2、trimToSize
++ 修改底层数组，使之长度为所包含内容的长度。（trim无用的capacity）
+
+3、ensureCapacity
++ 目标容量大于数组长度且大于默认容量则grow扩容
+
+4、grow
++ 数组扩容，新容量通过newCapacity计算
+
+5、newCapacity
++ 参数capacity与原容量的1.5倍（长+(长>>1)）与默认capacity取最大值返回。
 ### Vector：Object数组
 线程安全。
 ### LinkedList：双向链表，使用场景极少，作者都不用
