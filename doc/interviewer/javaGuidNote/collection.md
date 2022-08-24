@@ -21,6 +21,19 @@
 
 5、newCapacity
 + 参数capacity与原容量的1.5倍（长+(长>>1)）与默认capacity取最大值返回。
+
+6、indexOf
++ 判断null然后遍历数组通过==/equals判断相等返回下标
+
+7、lastIndexOf
++ 类似indexOf，从后往前遍历
+
+8、clone
++ super.clone，之后拷贝数组到父类clone的对象
+
+9、toArray
++ 拷贝数组
+
 ### Vector：Object数组
 线程安全。
 ### LinkedList：双向链表，使用场景极少，作者都不用
